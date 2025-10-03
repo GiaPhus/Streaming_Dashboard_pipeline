@@ -7,8 +7,8 @@ This project demonstrates a simple real-time data pipeline using **Airflow**,**D
 
 ```mermaid
 flowchart TD
-    A[Airflow DAG] -->|Call API every 30s for 10 min| B[MySQL]
-    B -->|CDC Debezium| C[Kafka]
-    C --> D[Spark Streaming Consumer]
-    D --> E[Cassandra]
-    E --> F[Grafana Dashboard]
+    A[Airflow DAG (Docker)] -->|Call API every 30s (for 10 min)| B[MySQL (Docker)]
+    B -->|CDC Debezium (Docker)| C[Kafka (Docker)]
+    C --> D[Spark Streaming Consumer (Docker)]
+    D --> E[Cassandra (Docker)]
+    E --> F[Grafana Dashboard (Docker)]
