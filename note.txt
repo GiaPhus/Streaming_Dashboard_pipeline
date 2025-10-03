@@ -1,0 +1,29 @@
+docker exec -it broker kafka-console-consumer \
+  --bootstrap-server broker:9092 \
+  --topic dbserver1.<database>.<table> \
+  --from-beginning
+  
+  
+  
+curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" localhost:8083/connectors/ -d @debizium.json
+
+
+Besides the practical knowledge I have gained as a Data Engineer, I feel that I am still young and eager to explore more aspects of IT. I hope to join StarCamp to further develop my system design skills and improve my English communication, which is why I chose NAB.
+
+
+
+docker exec -it broker kafka-console-consumer \
+  --bootstrap-server broker:9092 \
+  --topic mysql_server.staging_db.users \
+  --from-beginning
+  
+  
+  
+  
+ GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'appuser'@'%';
+FLUSH PRIVILEGES;
+docker exec -it mysql mysql -uroot -p
+
+spark-submit \
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.apache.spark:spark-streaming_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.5.0 \
+  ./app/main.py

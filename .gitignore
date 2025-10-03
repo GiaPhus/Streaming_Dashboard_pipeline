@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+
+venv/
+.env/
+
+# IDE
+.idea/
+.vscode/
+
+.airflow/
+
+cassandra_data/
+
+.DS_Store
+*.swp
+
+jars/
