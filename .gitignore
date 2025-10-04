@@ -21,3 +21,5 @@ cassandra_data/
 *.swp
 
 jars/
+
+note.txt
